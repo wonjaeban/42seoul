@@ -6,21 +6,21 @@
 /*   By: wban <wban@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 14:45:42 by wban              #+#    #+#             */
-/*   Updated: 2021/10/14 15:53:06 by wban             ###   ########.fr       */
+/*   Updated: 2021/10/14 17:01:34 by wban             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-int		ft_putnbr(int nb);
-void	temp(int a);
+void	ft_putnbr(int nb);
+int		temp(int nb);
 
 int	main(void)
 {
-	temp(ft_putnbr(98765432));
+	ft_putnbr(-98765432);
 }
 
-int	ft_putnbr(int nb)
+int	temp(int nb)
 {	
 	int		cn;
 	char	a;
@@ -33,15 +33,15 @@ int	ft_putnbr(int nb)
 	}
 	if (cn / 10 == 0)
 		return (cn % 10);
-	a = ft_putnbr(cn / 10) + '0';
+	a = temp(cn / 10) + '0';
 	write(1, &a, 1);
 	return (cn % 10);
 }
 
-void	temp(int a)
+void	ft_putnbr(int nb)
 {
 	char	b;
 
-	b = a + '0';
+	b = temp(nb) + '0';
 	write(1, &b, 1);
 }
