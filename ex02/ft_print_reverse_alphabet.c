@@ -6,11 +6,11 @@
 /*   By: wban <wban@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 19:02:53 by wban              #+#    #+#             */
-/*   Updated: 2021/10/11 19:13:03 by wban             ###   ########.fr       */
+/*   Updated: 2021/10/18 10:25:51 by wban             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd>
+#include<unistd.h>
 
 void	ft_print_reverse_alphabet(void)
 {

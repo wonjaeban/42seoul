@@ -6,42 +6,40 @@
 /*   By: wban <wban@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 14:45:42 by wban              #+#    #+#             */
-/*   Updated: 2021/10/14 17:01:34 by wban             ###   ########.fr       */
+/*   Updated: 2021/10/18 15:07:57 by wban             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-void	ft_putnbr(int nb);
-int		temp(int nb);
+int	ft_putnbr(int nb);
 
 int	main(void)
-{
-	ft_putnbr(-98765432);
+{	
+	char	temp;
+
+	temp = ft_putnbr(-2147483648) + '0';
+	if (temp != 47)
+		write(1, &temp, 1);
 }
 
-int	temp(int nb)
-{	
-	int		cn;
+int	ft_putnbr(int nb)
+{
 	char	a;
 
-	cn = nb;
-	if (cn < 0)
+	if (nb == -2147483648)
 	{
-		cn *= -1;
-		write(1, "-", 1);
+		write(1, "-2147483648", 11);
+		return (-1);
 	}
-	if (cn / 10 == 0)
-		return (cn % 10);
-	a = temp(cn / 10) + '0';
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb *= -1;
+	}
+	if (nb / 10 == 0)
+		return (nb % 10);
+	a = ft_putnbr(nb / 10) + '0';
 	write(1, &a, 1);
-	return (cn % 10);
-}
-
-void	ft_putnbr(int nb)
-{
-	char	b;
-
-	b = temp(nb) + '0';
-	write(1, &b, 1);
+	return (nb % 10);
 }

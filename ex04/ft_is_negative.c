@@ -6,11 +6,11 @@
 /*   By: wban <wban@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:30:43 by wban              #+#    #+#             */
-/*   Updated: 2021/10/11 21:37:41 by wban             ###   ########.fr       */
+/*   Updated: 2021/10/18 12:10:22 by wban             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd>
+#include<unistd.h>
 
 void	ft_is_negative(int n)
 {

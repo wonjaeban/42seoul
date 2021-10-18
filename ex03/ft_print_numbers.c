@@ -6,27 +6,24 @@
 /*   By: wban <wban@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 19:16:02 by wban              #+#    #+#             */
-/*   Updated: 2021/10/13 09:38:01 by wban             ###   ########.fr       */
+/*   Updated: 2021/10/18 12:27:39 by wban             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd>
+#include<unistd.h>
+
+void	ascending(char result[]);
 
 void	ft_print_numbers(void)
 {
-	long	number;
-	int		s;
-	char	result;
+	int		i;
+	char	c;
 
-	number = 9876543210;
-	s = number / 10;
-	result = (number % 10) + '0';
-	while (1)
+	i = 0;
+	while (i < 10)
 	{
-		write(1, &result, 1);
-		if (s == 0)
-			break ;
-		result = (s % 10) + '0';
-		s /= 10;
+		c = i + '0';
+		write(1, &c, 1);
+		i++;
 	}
 }
