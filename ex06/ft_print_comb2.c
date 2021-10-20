@@ -6,18 +6,11 @@
 /*   By: wban <wban@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:29:41 by wban              #+#    #+#             */
-/*   Updated: 2021/10/18 12:45:22 by wban             ###   ########.fr       */
+/*   Updated: 2021/10/20 10:18:41 by wban             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
-
-void	ft_print_comb2(void);
-
-int	main(void)
-{
-	ft_print_comb2();
-}
 
 void	ft_print_comb2(void)
 {

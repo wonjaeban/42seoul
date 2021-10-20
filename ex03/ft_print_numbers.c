@@ -6,13 +6,11 @@
 /*   By: wban <wban@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 19:16:02 by wban              #+#    #+#             */
-/*   Updated: 2021/10/18 12:27:39 by wban             ###   ########.fr       */
+/*   Updated: 2021/10/20 10:06:35 by wban             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
-
-void	ascending(char result[]);
 
 void	ft_print_numbers(void)
 {
